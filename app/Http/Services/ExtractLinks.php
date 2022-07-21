@@ -7,7 +7,7 @@ class ExtractLinks
 {
     public static function handle($target)
     {
-        $getHtml = file_get_html('http://osissmkn1ce.com');
+        $getHtml = file_get_html($target);
         $res = [];
         foreach($getHtml->find('a') as $a) {
             if($a->href) {
